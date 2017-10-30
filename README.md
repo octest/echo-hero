@@ -1,2 +1,2 @@
-# echo_hero
+# echo-hero
 Golang Echo + Hero
