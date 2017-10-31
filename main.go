@@ -1,15 +1,14 @@
 package main
 
 import (
-	"net/http"
+	h "echo-hero/handler"
 
 	"github.com/labstack/echo"
 )
 
 func main() {
 	e := echo.New()
-	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello, World!")
-	})
+	e.GET("/", h.Hello)
+	e.GET("/test", h.Test)
 	e.Logger.Fatal(e.Start(":8080"))
 }
