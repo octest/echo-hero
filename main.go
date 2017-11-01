@@ -11,5 +11,6 @@ func main() {
 	e.Static("/static", "static")
 	e.GET("/", h.Hello)
 	e.GET("/test", h.Test)
+	e.GET("/test2", h.Test2)
 	e.Logger.Fatal(e.Start(":8080"))
 }
