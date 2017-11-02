@@ -1,5 +1,10 @@
-<%: func Test2(msg string, buffer *bytes.Buffer) %>
+<%: func Test2(msg string, notes model.Notes, buffer *bytes.Buffer) %>
 <%+ "header.html" %>
 <h1>Test 2</h1>
 <p>Some message here: <b><%== msg %></b></p>
+<ul>
+<% for _, note := range notes {%>
+    <li><%== note.Name%> - <%== note.Account.Name%></li>
+<%} %>
+</ul>
 <%+ "footer.html" %>

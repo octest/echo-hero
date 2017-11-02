@@ -1,3 +1,5 @@
 {
-    "db": "test1"
+    "db": "test1",
+    "port" : "8080",
+    "debug": true
 }
