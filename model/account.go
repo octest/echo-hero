@@ -7,3 +7,10 @@ type Account struct {
 }
 
 type Accounts []Account
+
+func (a Account) Valid() (val *Validators) {
+	if a.Name == "" {
+		//append(val.Messages, fmt.Sprintf(VALID_MISSING, "Name"))
+	}
+	return
+}
